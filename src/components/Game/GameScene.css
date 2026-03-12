@@ -1,0 +1,724 @@
+/* =============================================
+   EcoQuest — Game Scene Styles
+   ============================================= */
+
+.game-scene {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #0f1923 0%, #1a2735 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+/* --- Back Button --- */
+.game-back-btn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.game-back-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+/* --- Level Info --- */
+.game-level-info {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  text-align: center;
+}
+
+.game-level-info__id {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.game-level-info__name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+/* --- Sparky Companion --- */
+.sparky {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  max-width: 250px;
+}
+
+.sparky__face {
+  width: 44px;
+  height: 44px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--emerald);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: border-color 0.3s;
+}
+
+.sparky--worried .sparky__face { border-color: var(--gold); }
+.sparky--angry .sparky__face { border-color: var(--alizarin); animation: shake 0.5s ease-in-out; }
+
+.sparky__name {
+  font-family: var(--font-heading);
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+.sparky__speech {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px 12px 0 12px;
+  padding: 10px 14px;
+  animation: fadeInScale 0.3s ease-out;
+}
+
+.sparky__speech p {
+  font-family: var(--font-dialogue);
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* --- Energy Dashboard --- */
+.energy-dashboard {
+  margin: 56px 12px 8px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 12px 16px;
+  flex-shrink: 0;
+}
+
+.energy-dashboard__header {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.energy-stats {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.energy-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.energy-stat__label {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.energy-stat__value {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--emerald);
+  transition: color 0.3s;
+}
+
+/* Power bar */
+.power-bar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.power-bar__fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.5s ease, background 0.5s ease;
+  background: var(--emerald);
+}
+
+/* --- Room Tabs --- */
+.room-tabs {
+  display: flex;
+  gap: 6px;
+  padding: 8px 12px;
+  overflow-x: auto;
+  flex-shrink: 0;
+}
+
+.room-tabs::-webkit-scrollbar { display: none; }
+
+.room-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  color: var(--text-secondary);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.room-tab:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.room-tab--active {
+  color: var(--text-primary);
+}
+
+.room-tab__icon {
+  font-size: 1.1rem;
+}
+
+.room-tab__name {
+  font-size: 0.8rem;
+}
+
+/* --- Room Content --- */
+.room-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 12px;
+}
+
+.appliance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.room-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  color: var(--text-muted);
+}
+
+/* --- Appliance Card --- */
+.appliance-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.25s;
+  position: relative;
+  text-align: center;
+}
+
+.appliance-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.appliance-card:active {
+  transform: scale(0.96);
+}
+
+.appliance-card--on {
+  border-color: rgba(46, 204, 113, 0.3);
+  background: rgba(46, 204, 113, 0.06);
+}
+
+.appliance-card--off {
+  opacity: 0.65;
+}
+
+.appliance-card--selected {
+  border-color: var(--sky);
+  box-shadow: 0 0 20px rgba(52, 152, 219, 0.2);
+}
+
+.appliance-card--interacted .appliance-card__new-badge {
+  display: none;
+}
+
+.appliance-card__icon-wrap {
+  position: relative;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.appliance-card__icon {
+  z-index: 1;
+  transition: transform 0.2s;
+}
+
+.appliance-card:hover .appliance-card__icon {
+  transform: scale(1.2);
+}
+
+.appliance-card__power-indicator {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  background: var(--emerald);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(46, 204, 113, 0.6);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.appliance-card__name {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.appliance-card__watts {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.appliance-card__new-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: var(--alizarin);
+  color: #fff;
+  font-size: 0.55rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Toggle button */
+.appliance-toggle {
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+}
+
+.appliance-toggle--on {
+  background: rgba(46, 204, 113, 0.2);
+  border-color: var(--emerald);
+  color: var(--emerald);
+}
+
+.appliance-toggle:hover {
+  transform: scale(1.05);
+}
+
+/* --- Appliance Detail Panel --- */
+.appliance-panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, #1a2535, #111b28);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px 24px 0 0;
+  padding: 20px;
+  max-height: 55%;
+  overflow-y: auto;
+  z-index: 30;
+  animation: slideUp 0.3s ease-out;
+}
+
+.appliance-panel__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.appliance-panel__icon {
+  font-size: 2.5rem;
+}
+
+.appliance-panel__header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.appliance-panel__rating {
+  font-size: 0.8rem;
+}
+
+.appliance-panel__close {
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.appliance-panel__close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+}
+
+.appliance-panel__stats {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.panel-stat {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.panel-stat__icon { font-size: 1.2rem; }
+
+.panel-stat__label {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.panel-stat__value {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.appliance-panel__tips {
+  margin-bottom: 12px;
+}
+
+.appliance-panel__tips h4 {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+}
+
+.appliance-panel__tips ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.appliance-panel__tips li {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  padding: 6px 10px;
+  background: rgba(46, 204, 113, 0.06);
+  border-radius: 8px;
+  border-left: 3px solid var(--emerald);
+}
+
+.appliance-panel__facts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.fact-bubble {
+  font-family: var(--font-dialogue);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  padding: 6px 10px;
+  background: rgba(52, 152, 219, 0.06);
+  border-radius: 8px;
+}
+
+.appliance-panel__actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* --- Quiz Modal --- */
+.quiz-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 20px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.quiz-card {
+  background: linear-gradient(180deg, #1e2d3d, #152233);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 28px;
+  max-width: 440px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  animation: fadeInScale 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.quiz-card__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.quiz-card__icon { font-size: 2rem; }
+
+.quiz-card__header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--gold);
+}
+
+.quiz-card__question {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.quiz-card__options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quiz-option:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--sky);
+}
+
+.quiz-option__letter {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.quiz-option--correct {
+  border-color: var(--emerald) !important;
+  background: rgba(46, 204, 113, 0.15) !important;
+}
+
+.quiz-option--correct .quiz-option__letter {
+  background: var(--emerald);
+  color: #fff;
+}
+
+.quiz-option--wrong {
+  border-color: var(--alizarin) !important;
+  background: rgba(231, 76, 60, 0.15) !important;
+}
+
+.quiz-option--wrong .quiz-option__letter {
+  background: var(--alizarin);
+  color: #fff;
+}
+
+.quiz-option--disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.quiz-card__result {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.quiz-card__result--correct {
+  background: rgba(46, 204, 113, 0.1);
+  border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.quiz-card__result--wrong {
+  background: rgba(231, 76, 60, 0.1);
+  border: 1px solid rgba(231, 76, 60, 0.2);
+}
+
+.quiz-card__result p:first-child {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.quiz-card__explanation {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 12px !important;
+}
+
+/* --- Game Progress --- */
+.game-progress {
+  padding: 10px 16px 16px;
+  background: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.game-progress__score {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.game-progress__bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--emerald), var(--sky));
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.game-progress__count {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .appliance-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  
+  .appliance-card {
+    padding: 10px;
+  }
+  
+  .sparky {
+    max-width: 200px;
+  }
+  
+  .sparky__speech p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .appliance-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .energy-stats {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

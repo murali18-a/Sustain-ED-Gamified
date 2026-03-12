@@ -1,0 +1,125 @@
+{
+  "chapters": [
+    {
+      "id": 1,
+      "name": "Welcome Home",
+      "theme": "Understanding your home's energy consumption",
+      "color": "#7f8c8d",
+      "bgTheme": "polluted_city",
+      "icon": "🏠",
+      "unlockCondition": null
+    },
+    {
+      "id": 2,
+      "name": "The Upgrade",
+      "theme": "Energy-efficient appliances",
+      "color": "#27ae60",
+      "bgTheme": "suburban",
+      "icon": "⭐",
+      "unlockCondition": { "chapter": 1, "minStars": 12 }
+    },
+    {
+      "id": 3,
+      "name": "Here Comes the Sun",
+      "theme": "Solar energy",
+      "color": "#f1c40f",
+      "bgTheme": "sunny_hillside",
+      "icon": "☀️",
+      "unlockCondition": { "chapter": 2, "minStars": 12 }
+    },
+    {
+      "id": 4,
+      "name": "Winds of Change",
+      "theme": "Wind energy",
+      "color": "#3498db",
+      "bgTheme": "windy_plains",
+      "icon": "🌬️",
+      "unlockCondition": { "chapter": 3, "minStars": 12 }
+    },
+    {
+      "id": 5,
+      "name": "Water Power",
+      "theme": "Hydropower & water conservation",
+      "color": "#2980b9",
+      "bgTheme": "river_valley",
+      "icon": "💧",
+      "unlockCondition": { "chapter": 4, "minStars": 8 }
+    },
+    {
+      "id": 6,
+      "name": "Back to Earth",
+      "theme": "Biomass & circular economy",
+      "color": "#8e44ad",
+      "bgTheme": "forest",
+      "icon": "🌱",
+      "unlockCondition": { "chapter": 5, "minStars": 8 }
+    },
+    {
+      "id": 7,
+      "name": "Net Zero Hero",
+      "theme": "Carbon footprint mastery",
+      "color": "#2ecc71",
+      "bgTheme": "green_city",
+      "icon": "🌍",
+      "unlockCondition": { "chapter": 6, "minStars": 8 }
+    }
+  ],
+  "levels": [
+    { "id": "1.1", "chapter": 1, "name": "Move-In Day", "type": "tutorial", "isBoss": false, "objective": "Walk through your new 1BHK house and meet every appliance", "starCriteria": { "1": "Tap all appliances", "2": "Read all tips", "3": "Answer all quiz questions" }, "rewards": { "coins": [100, 200, 500], "gems": [0, 0, 5] } },
+    { "id": "1.2", "chapter": 1, "name": "The Energy Detective", "type": "puzzle", "isBoss": false, "objective": "Find all phantom loads in the house", "starCriteria": { "1": "Find 3 phantom loads", "2": "Find 5 phantom loads", "3": "Find all 7 phantom loads" }, "rewards": { "coins": [100, 250, 600], "gems": [0, 0, 5] } },
+    { "id": "1.3", "chapter": 1, "name": "Morning Routine", "type": "puzzle", "isBoss": false, "objective": "Manage morning appliances within energy budget", "starCriteria": { "1": "Bill under ₹3,500", "2": "Bill under ₹3,000", "3": "Bill under ₹2,500" }, "rewards": { "coins": [150, 300, 700], "gems": [0, 0, 5] } },
+    { "id": "1.4", "chapter": 1, "name": "Afternoon Heat Wave", "type": "puzzle", "isBoss": false, "objective": "Keep cool without breaking the bank", "starCriteria": { "1": "Comfort score > 50", "2": "Comfort > 50, bill under ₹4,000", "3": "Comfort > 70, bill under ₹3,000" }, "rewards": { "coins": [150, 300, 700], "gems": [0, 0, 5] } },
+    { "id": "1.5", "chapter": 1, "name": "Evening Family Time", "type": "puzzle", "isBoss": false, "objective": "Balance entertainment and energy efficiency", "starCriteria": { "1": "Complete the evening", "2": "Bill under ₹3,500", "3": "Bill under ₹2,500" }, "rewards": { "coins": [150, 300, 700], "gems": [0, 0, 5] } },
+    { "id": "1.6", "chapter": 1, "name": "The Budget Challenge", "type": "puzzle", "isBoss": false, "objective": "Keep monthly bill under ₹2,000 while maintaining comfort", "starCriteria": { "1": "Bill under ₹3,000", "2": "Bill under ₹2,500", "3": "Bill under ₹2,000" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "1.7", "chapter": 1, "name": "Phantom Load Hunt", "type": "puzzle", "isBoss": false, "objective": "Eliminate all standby power waste in 60 seconds", "starCriteria": { "1": "Eliminate 50% phantom loads", "2": "Eliminate 80%", "3": "Eliminate 100% in under 45s" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "1.8", "chapter": 1, "name": "The Phantom Load", "type": "boss", "isBoss": true, "objective": "Defeat the Phantom Load minion of Dr. Carbon!", "starCriteria": { "1": "Survive 3 waves", "2": "Survive 5 waves", "3": "Defeat the Phantom Load" }, "rewards": { "coins": [300, 600, 1500], "gems": [5, 10, 25] } },
+
+    { "id": "2.1", "chapter": 2, "name": "Star Rating School", "type": "tutorial", "isBoss": false, "objective": "Learn about BEE Star Ratings", "starCriteria": { "1": "Complete tutorial", "2": "Answer 3 quizzes", "3": "Perfect score" }, "rewards": { "coins": [100, 200, 500], "gems": [0, 0, 5] } },
+    { "id": "2.2", "chapter": 2, "name": "LED vs Incandescent", "type": "puzzle", "isBoss": false, "objective": "Replace all bulbs with LEDs within budget", "starCriteria": { "1": "Replace 50%", "2": "Replace 80%", "3": "Replace 100%" }, "rewards": { "coins": [150, 300, 700], "gems": [0, 0, 5] } },
+    { "id": "2.3", "chapter": 2, "name": "The Appliance Shop", "type": "puzzle", "isBoss": false, "objective": "Upgrade your home within ₹50,000 budget for best ROI", "starCriteria": { "1": "Save 20% on bills", "2": "Save 35%", "3": "Save 50% or more" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "2.4", "chapter": 2, "name": "The 2BHK Move", "type": "puzzle", "isBoss": false, "objective": "Set up your larger 2BHK house efficiently", "starCriteria": { "1": "All rooms equipped", "2": "Bill under ₹4,000", "3": "Bill under ₹3,000" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "2.5", "chapter": 2, "name": "Kitchen Efficiency", "type": "puzzle", "isBoss": false, "objective": "Optimize kitchen appliance energy use", "starCriteria": { "1": "Complete cooking tasks", "2": "Save 25% energy", "3": "Save 40% energy" }, "rewards": { "coins": [150, 300, 700], "gems": [0, 0, 5] } },
+    { "id": "2.6", "chapter": 2, "name": "Smart Home Basics", "type": "tutorial", "isBoss": false, "objective": "Install smart power strips and timers", "starCriteria": { "1": "Install 2 smart strips", "2": "Reduce phantom load 60%", "3": "Zero phantom load" }, "rewards": { "coins": [150, 300, 700], "gems": [0, 0, 5] } },
+    { "id": "2.7", "chapter": 2, "name": "ROI Calculator", "type": "puzzle", "isBoss": false, "objective": "Calculate payback periods for all upgrades", "starCriteria": { "1": "Calculate 3 paybacks", "2": "All paybacks correct", "3": "Under 30 seconds each" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "2.8", "chapter": 2, "name": "The Energy Vampire", "type": "boss", "isBoss": true, "objective": "Defeat the Energy Vampire with efficient upgrades!", "starCriteria": { "1": "Survive 3 rounds", "2": "Survive 5 rounds", "3": "Defeat the Vampire" }, "rewards": { "coins": [300, 600, 1500], "gems": [5, 10, 25] } },
+
+    { "id": "3.1", "chapter": 3, "name": "Meet Sunny", "type": "tutorial", "isBoss": false, "objective": "Learn how solar panels work", "starCriteria": { "1": "Complete", "2": "Quiz perfect", "3": "Under 3 minutes" }, "rewards": { "coins": [100, 200, 500], "gems": [0, 0, 5] } },
+    { "id": "3.2", "chapter": 3, "name": "Solar Science Lab", "type": "tutorial", "isBoss": false, "objective": "Understand photovoltaic cells", "starCriteria": { "1": "Complete", "2": "Quiz perfect", "3": "Explore all sections" }, "rewards": { "coins": [100, 200, 500], "gems": [0, 0, 5] } },
+    { "id": "3.3", "chapter": 3, "name": "Panel Placement", "type": "puzzle", "isBoss": false, "objective": "Place solar panels for maximum output", "starCriteria": { "1": "3 kWh/day", "2": "4.5 kWh/day", "3": "6 kWh/day" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "3.4", "chapter": 3, "name": "Solar Calculator", "type": "puzzle", "isBoss": false, "objective": "Calculate solar savings and payback period", "starCriteria": { "1": "Complete", "2": "Correct calculations", "3": "Optimal setup" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "3.5", "chapter": 3, "name": "Day & Night Cycle", "type": "puzzle", "isBoss": false, "objective": "Manage 24-hour power cycle with solar", "starCriteria": { "1": "Survive 24hrs", "2": "Grid use under 30%", "3": "Grid use under 10%" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "3.6", "chapter": 3, "name": "Battery Storage", "type": "puzzle", "isBoss": false, "objective": "Size and use battery storage optimally", "starCriteria": { "1": "Install battery", "2": "No blackouts", "3": "Zero grid at night" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "3.7", "chapter": 3, "name": "Net Metering Master", "type": "puzzle", "isBoss": false, "objective": "Maximize net metering earnings", "starCriteria": { "1": "Earn ₹100/month", "2": "Earn ₹300/month", "3": "Earn ₹500/month" }, "rewards": { "coins": [250, 500, 1000], "gems": [0, 0, 15] } },
+    { "id": "3.8", "chapter": 3, "name": "Cloudy Darkness", "type": "boss", "isBoss": true, "objective": "Defeat the storm clouds sent by Dr. Carbon!", "starCriteria": { "1": "Survive 3 mins", "2": "Survive 5 mins", "3": "Clear all clouds" }, "rewards": { "coins": [300, 600, 1500], "gems": [5, 10, 25] } },
+
+    { "id": "4.1", "chapter": 4, "name": "Meet Breeze", "type": "tutorial", "isBoss": false, "objective": "Learn about wind energy", "starCriteria": { "1": "Complete", "2": "Quiz perfect", "3": "Under 3 min" }, "rewards": { "coins": [100, 200, 500], "gems": [0, 0, 5] } },
+    { "id": "4.2", "chapter": 4, "name": "Wind Mapping", "type": "puzzle", "isBoss": false, "objective": "Find the best wind location", "starCriteria": { "1": "Find 1 good spot", "2": "Find best spot", "3": "Map all locations" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "4.3", "chapter": 4, "name": "Turbine Builder", "type": "puzzle", "isBoss": false, "objective": "Build and optimize a small wind turbine", "starCriteria": { "1": "Build turbine", "2": "Generate 1kW", "3": "Generate 2kW" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "4.4", "chapter": 4, "name": "Solar + Wind Hybrid", "type": "puzzle", "isBoss": false, "objective": "Create a hybrid solar-wind system", "starCriteria": { "1": "Combine systems", "2": "80% renewable", "3": "100% renewable" }, "rewards": { "coins": [250, 500, 1000], "gems": [0, 0, 15] } },
+    { "id": "4.5", "chapter": 4, "name": "Weather Warrior", "type": "puzzle", "isBoss": false, "objective": "Manage energy through varied weather", "starCriteria": { "1": "Survive all weather", "2": "No blackouts", "3": "Zero grid use" }, "rewards": { "coins": [250, 500, 1000], "gems": [0, 0, 15] } },
+    { "id": "4.6", "chapter": 4, "name": "The Still Air", "type": "boss", "isBoss": true, "objective": "Survive Dr. Carbon's stillness field!", "starCriteria": { "1": "Survive", "2": "Keep comfort > 50", "3": "Keep comfort > 70" }, "rewards": { "coins": [300, 600, 1500], "gems": [5, 10, 25] } },
+
+    { "id": "5.1", "chapter": 5, "name": "Water-Energy Link", "type": "tutorial", "isBoss": false, "objective": "Understand water-energy nexus", "starCriteria": { "1": "Complete", "2": "Quiz perfect", "3": "Under 3 min" }, "rewards": { "coins": [100, 200, 500], "gems": [0, 0, 5] } },
+    { "id": "5.2", "chapter": 5, "name": "Rainwater Setup", "type": "puzzle", "isBoss": false, "objective": "Design rainwater harvesting system", "starCriteria": { "1": "Basic setup", "2": "Capture 80%", "3": "Capture 95%+" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "5.3", "chapter": 5, "name": "Micro-Hydro Build", "type": "puzzle", "isBoss": false, "objective": "Build micro-hydro in downpipe", "starCriteria": { "1": "Build it", "2": "Generate 0.5kW", "3": "Generate 1kW" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "5.4", "chapter": 5, "name": "Water Audit", "type": "puzzle", "isBoss": false, "objective": "Audit and fix water fixtures", "starCriteria": { "1": "Audit complete", "2": "Save 30% water", "3": "Save 50% water" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "5.5", "chapter": 5, "name": "Conservation Master", "type": "puzzle", "isBoss": false, "objective": "Minimize water and energy waste", "starCriteria": { "1": "Complete", "2": "Save 40%", "3": "Save 60%" }, "rewards": { "coins": [250, 500, 1000], "gems": [0, 0, 15] } },
+    { "id": "5.6", "chapter": 5, "name": "Leak Lord", "type": "boss", "isBoss": true, "objective": "Find and fix all leaks before water runs out!", "starCriteria": { "1": "Fix 5 leaks", "2": "Fix 10 leaks", "3": "Fix all leaks" }, "rewards": { "coins": [300, 600, 1500], "gems": [5, 10, 25] } },
+
+    { "id": "6.1", "chapter": 6, "name": "Trash Sorting", "type": "tutorial", "isBoss": false, "objective": "Sort waste into correct categories", "starCriteria": { "1": "Sort 70%", "2": "Sort 90%", "3": "Sort 100%" }, "rewards": { "coins": [100, 200, 500], "gems": [0, 0, 5] } },
+    { "id": "6.2", "chapter": 6, "name": "Biogas Builder", "type": "puzzle", "isBoss": false, "objective": "Build a home biogas digester", "starCriteria": { "1": "Build digester", "2": "Replace 50% LPG", "3": "Replace 100% LPG" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "6.3", "chapter": 6, "name": "Compost King", "type": "puzzle", "isBoss": false, "objective": "Create a composting system", "starCriteria": { "1": "Start composting", "2": "Process 5kg/day", "3": "Zero organic waste" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "6.4", "chapter": 6, "name": "Carbon Cycle", "type": "tutorial", "isBoss": false, "objective": "Explore the complete carbon cycle", "starCriteria": { "1": "Complete tour", "2": "Quiz perfect", "3": "All interactions" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "6.5", "chapter": 6, "name": "Circular Economy", "type": "puzzle", "isBoss": false, "objective": "Achieve zero-waste household", "starCriteria": { "1": "Reduce 50%", "2": "Reduce 80%", "3": "Zero waste" }, "rewards": { "coins": [250, 500, 1000], "gems": [0, 0, 15] } },
+    { "id": "6.6", "chapter": 6, "name": "Smog Serpent", "type": "boss", "isBoss": true, "objective": "Defeat the methane serpent with biogas!", "starCriteria": { "1": "Survive", "2": "Capture 50% methane", "3": "Capture all methane" }, "rewards": { "coins": [300, 600, 1500], "gems": [5, 10, 25] } },
+
+    { "id": "7.1", "chapter": 7, "name": "Carbon Footprint", "type": "puzzle", "isBoss": false, "objective": "Calculate your real carbon footprint", "starCriteria": { "1": "Complete calculator", "2": "Under 4 tonnes", "3": "Under 2 tonnes" }, "rewards": { "coins": [200, 400, 800], "gems": [0, 0, 10] } },
+    { "id": "7.2", "chapter": 7, "name": "Net Zero House", "type": "puzzle", "isBoss": false, "objective": "Design a net zero energy house", "starCriteria": { "1": "Net reduction 50%", "2": "Net zero", "3": "Net positive" }, "rewards": { "coins": [300, 600, 1200], "gems": [0, 0, 15] } },
+    { "id": "7.3", "chapter": 7, "name": "Green Building", "type": "puzzle", "isBoss": false, "objective": "Apply green building design principles", "starCriteria": { "1": "3 green features", "2": "6 features", "3": "All features" }, "rewards": { "coins": [250, 500, 1000], "gems": [0, 0, 15] } },
+    { "id": "7.4", "chapter": 7, "name": "Community Solar", "type": "puzzle", "isBoss": false, "objective": "Build a community solar farm", "starCriteria": { "1": "Power 5 homes", "2": "Power 15 homes", "3": "Power 30 homes" }, "rewards": { "coins": [300, 600, 1200], "gems": [0, 0, 15] } },
+    { "id": "7.5", "chapter": 7, "name": "Neighborhood", "type": "puzzle", "isBoss": false, "objective": "Transform the whole neighborhood green", "starCriteria": { "1": "Help 3 neighbors", "2": "Help 8 neighbors", "3": "All neighbors green" }, "rewards": { "coins": [300, 600, 1200], "gems": [0, 0, 15] } },
+    { "id": "7.6", "chapter": 7, "name": "City Transform", "type": "puzzle", "isBoss": false, "objective": "Lead the city's green transformation", "starCriteria": { "1": "30% renewable city", "2": "60% renewable", "3": "100% renewable" }, "rewards": { "coins": [400, 800, 1500], "gems": [0, 0, 20] } },
+    { "id": "7.7", "chapter": 7, "name": "Climate Pledge", "type": "tutorial", "isBoss": false, "objective": "Make your personal climate pledge", "starCriteria": { "1": "Make pledge", "2": "Share pledge", "3": "Get 5 friends" }, "rewards": { "coins": [200, 400, 800], "gems": [5, 10, 20] } },
+    { "id": "7.8", "chapter": 7, "name": "Dr. Carbon", "type": "boss", "isBoss": true, "objective": "FINAL BOSS: Defeat Dr. Carbon with all renewable powers!", "starCriteria": { "1": "Complete Phase 1", "2": "Complete Phase 3", "3": "Achieve Net Zero victory" }, "rewards": { "coins": [500, 1000, 3000], "gems": [10, 25, 50] } }
+  ]
+}

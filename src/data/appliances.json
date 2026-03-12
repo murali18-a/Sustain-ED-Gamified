@@ -1,0 +1,362 @@
+{
+  "appliances": [
+    {
+      "id": "incandescent_bulb",
+      "name": "Incandescent Bulb",
+      "icon": "💡",
+      "category": "Lighting",
+      "room": "living_room",
+      "wattage": 60,
+      "standbyWatts": 0,
+      "hoursPerDay": 8,
+      "starRating": 1,
+      "price": 20,
+      "character": "Grumpy old-timer",
+      "dialogue": {
+        "intro": "Hi! I'm a 60W incandescent bulb. I turn 90% of my energy into HEAT, not light! I'm basically a tiny heater pretending to be a light!",
+        "tap": ["I waste 90% of energy as heat!", "I was invented in 1879. Isn't it time for an upgrade?", "LED bulbs do my job using only 9W!"],
+        "angry": "I'm literally burning money here! Replace me already!",
+        "happy": "Wait—you replaced me with an LED? Smart move!"
+      },
+      "tips": ["Replace with 9W LED — same brightness, 85% less energy", "LEDs last 25x longer than me", "Each LED swap saves ₹300/year"],
+      "quiz": [
+        {
+          "question": "How much energy does an incandescent bulb waste as heat?",
+          "options": ["10%", "50%", "70%", "90%"],
+          "answer": 3,
+          "explanation": "Incandescent bulbs convert 90% of electricity into heat, only 10% into light!"
+        }
+      ],
+      "variants": {
+        "1": { "model": "Incandescent 60W", "wattage": 60, "price": 20 },
+        "3": { "model": "CFL 15W", "wattage": 15, "price": 150 },
+        "5": { "model": "LED 9W", "wattage": 9, "price": 120 }
+      }
+    },
+    {
+      "id": "led_bulb",
+      "name": "LED Bulb",
+      "icon": "💡",
+      "category": "Lighting",
+      "room": "bedroom",
+      "wattage": 9,
+      "standbyWatts": 0,
+      "hoursPerDay": 8,
+      "starRating": 5,
+      "price": 120,
+      "character": "Bright and optimistic",
+      "dialogue": {
+        "intro": "I'm a modern 9W LED! Same brightness as that old 60W bulb, but I use 85% less energy! 💚",
+        "tap": ["I last 25,000 hours!", "I save ₹300 per year compared to incandescent", "My light is instant — no warm-up time!"],
+        "angry": "Even I can't help if you leave me on in an empty room!",
+        "happy": "You're using me wisely! Natural light during the day, me at night!"
+      },
+      "tips": ["Use natural light during daytime", "Turn off when leaving a room", "Use warm white (2700K) for bedrooms, cool white (6500K) for study"],
+      "quiz": [
+        {
+          "question": "An LED bulb uses how many watts to match a 60W incandescent?",
+          "options": ["30W", "20W", "15W", "9W"],
+          "answer": 3,
+          "explanation": "A 9W LED produces the same brightness (800 lumens) as a 60W incandescent bulb!"
+        }
+      ]
+    },
+    {
+      "id": "ceiling_fan",
+      "name": "Ceiling Fan",
+      "icon": "🌀",
+      "category": "Cooling",
+      "room": "living_room",
+      "wattage": 75,
+      "standbyWatts": 0,
+      "hoursPerDay": 10,
+      "starRating": 3,
+      "price": 2500,
+      "character": "Dizzy and chatty",
+      "dialogue": {
+        "intro": "Whirr whirr! I'm your ceiling fan! I use 75 watts — that's like keeping 1.25 incandescent bulbs on! But I make the room feel 4°C cooler without actually changing the temperature!",
+        "tap": ["I create a wind-chill effect — I cool YOU, not the room!", "BLDC fans do my job with only 28W!", "Turn me off when no one's in the room — I can't cool furniture!"],
+        "angry": "Hey! I've been spinning for 18 hours straight! Give me a break!",
+        "happy": "Nice! You switched to a BLDC motor fan — I use 62% less power now!"
+      },
+      "tips": ["Use fan instead of AC when possible — 20x cheaper!", "BLDC fans save 62% energy", "Set fan speed based on need — lower speed = less power"],
+      "quiz": [
+        {
+          "question": "How much can a BLDC fan save compared to a regular fan?",
+          "options": ["30%", "45%", "62%", "80%"],
+          "answer": 2,
+          "explanation": "BLDC (Brushless DC) fans use only 28W compared to 75W regular fans — a 62% saving!"
+        }
+      ],
+      "variants": {
+        "1": { "model": "Basic Fan", "wattage": 90, "price": 1200 },
+        "2": { "model": "Standard Fan", "wattage": 75, "price": 1800 },
+        "3": { "model": "Efficient Fan", "wattage": 55, "price": 2500 },
+        "4": { "model": "Energy Saver Fan", "wattage": 40, "price": 3500 },
+        "5": { "model": "BLDC SuperFan", "wattage": 28, "price": 4500 }
+      }
+    },
+    {
+      "id": "table_fan",
+      "name": "Table Fan",
+      "icon": "🌬️",
+      "category": "Cooling",
+      "room": "bedroom",
+      "wattage": 50,
+      "standbyWatts": 0,
+      "hoursPerDay": 6,
+      "starRating": 3,
+      "price": 1500,
+      "character": "Small but mighty",
+      "dialogue": {
+        "intro": "I'm the efficient one — only 50 watts! I'm 30x cheaper to run than the AC!",
+        "tap": ["I'm perfect for personal cooling!", "Point me at yourself, not the whole room", "I cost less than ₹1 to run for 2 hours!"],
+        "angry": "Don't leave me oscillating in an empty room!",
+        "happy": "Smart choice using me instead of the AC today!"
+      },
+      "tips": ["Great alternative to AC on mild days", "Use with a wet towel for evaporative cooling", "Point directly at yourself for best effect"],
+      "quiz": [
+        {
+          "question": "How much cheaper is a table fan to run compared to AC?",
+          "options": ["5x", "10x", "20x", "30x"],
+          "answer": 3,
+          "explanation": "An AC uses 1500W while a table fan uses only 50W — that's 30x cheaper to run!"
+        }
+      ]
+    },
+    {
+      "id": "ac_non_inverter",
+      "name": "AC (Non-Inverter)",
+      "icon": "❄️",
+      "category": "Cooling",
+      "room": "bedroom",
+      "wattage": 1500,
+      "standbyWatts": 10,
+      "hoursPerDay": 8,
+      "starRating": 2,
+      "price": 28000,
+      "character": "The power king",
+      "dialogue": {
+        "intro": "I'm the KING of energy consumption — 1500 watts! I cost your parents about ₹12-15 per hour to run!",
+        "tap": ["I use as much power as 25 ceiling fans!", "Set me to 24°C — each degree lower costs 6% more energy", "Close windows and doors when I'm on!"],
+        "angry": "You left me on AND the windows open?! That's like filling a bathtub with the drain open! 🤦",
+        "happy": "24°C with the fan on? Perfect! I don't have to work as hard!"
+      },
+      "tips": ["Set to 24°C (not 16°C!) — saves 30% energy", "Use fan alongside — feels 3°C cooler", "Clean filters monthly for 15% better efficiency", "Close all windows and seal gaps"],
+      "quiz": [
+        {
+          "question": "What's the optimal AC temperature for energy saving?",
+          "options": ["16°C", "20°C", "24°C", "28°C"],
+          "answer": 2,
+          "explanation": "24°C is the sweet spot! Each degree below 24°C increases energy use by about 6%."
+        }
+      ],
+      "variants": {
+        "2": { "model": "Non-Inverter AC", "wattage": 1500, "price": 28000 },
+        "3": { "model": "3-Star AC", "wattage": 1200, "price": 32000 },
+        "5": { "model": "5-Star Inverter AC", "wattage": 900, "price": 42000 }
+      }
+    },
+    {
+      "id": "refrigerator",
+      "name": "Refrigerator",
+      "icon": "🧊",
+      "category": "Kitchen",
+      "room": "kitchen",
+      "wattage": 350,
+      "standbyWatts": 350,
+      "hoursPerDay": 24,
+      "starRating": 3,
+      "price": 15000,
+      "character": "Always hungry for electricity",
+      "dialogue": {
+        "intro": "I'm always hungry for electricity — 350 watts! I never sleep. 24 hours a day, 365 days a year. I'm your biggest energy consumer!",
+        "tap": ["I consume 252 kWh per month!", "Don't open my door too often — I lose cold air each time", "Keep me 70% full for best efficiency"],
+        "angry": "Stop standing there with my door open! I'm losing all my cool!",
+        "happy": "You upgraded me to an inverter model! I use 48% less power now!"
+      },
+      "tips": ["Set temperature to 3-4°C, not lower", "Don't put hot food directly inside", "Keep away from stove and sunlight", "Clean condenser coils every 6 months"],
+      "quiz": [
+        {
+          "question": "How many kWh does a 350W fridge consume per month?",
+          "options": ["50 kWh", "150 kWh", "252 kWh", "500 kWh"],
+          "answer": 2,
+          "explanation": "350W × 24hrs × 30days ÷ 1000 = 252 kWh per month! That's ₹2,016 at ₹8/unit!"
+        }
+      ],
+      "variants": {
+        "2": { "model": "Basic Fridge", "wattage": 350, "price": 15000 },
+        "3": { "model": "3-Star Fridge", "wattage": 280, "price": 18000 },
+        "5": { "model": "5-Star Inverter Fridge", "wattage": 180, "price": 25000 }
+      }
+    },
+    {
+      "id": "tv_led",
+      "name": "LED TV (42\")",
+      "icon": "📺",
+      "category": "Entertainment",
+      "room": "living_room",
+      "wattage": 100,
+      "standbyWatts": 10,
+      "hoursPerDay": 5,
+      "starRating": 4,
+      "price": 22000,
+      "character": "Entertainment hub with a secret",
+      "dialogue": {
+        "intro": "I use 100 watts when on. But here's my secret — I STILL use 5-15 watts even when you turn me off! It's called 'standby power' or 'phantom load'!",
+        "tap": ["My remote standby uses 10W — that's 7.2 kWh per month wasted!", "Use a smart power strip to truly turn me off", "Reduce brightness by 20% and save 10% energy"],
+        "angry": "No one's watching but I've been on for 6 hours!",
+        "happy": "Thanks for turning me off at the power strip! Zero phantom load!"
+      },
+      "tips": ["Switch off at power strip when not in use", "Reduce brightness — saves energy and is better for eyes", "Enable auto-off timer"],
+      "quiz": [
+        {
+          "question": "What is 'phantom load' or 'standby power'?",
+          "options": ["Power used when appliance is broken", "Power used when appliance is 'off' but plugged in", "Power used during power cuts", "Extra power during startup"],
+          "answer": 1,
+          "explanation": "Phantom load is power consumed by devices when they're switched off but still plugged in. It can account for 5-10% of your total electricity bill!"
+        }
+      ]
+    },
+    {
+      "id": "geyser",
+      "name": "Water Heater / Geyser",
+      "icon": "🚿",
+      "category": "Bathroom",
+      "room": "bathroom",
+      "wattage": 2000,
+      "standbyWatts": 0,
+      "hoursPerDay": 0.5,
+      "starRating": 2,
+      "price": 8000,
+      "character": "The brief hothead",
+      "dialogue": {
+        "intro": "I use 2000W — I'm one of the most power-hungry appliances! But you only need me for 15-30 minutes a day!",
+        "tap": ["15 minutes at 2000W = 0.5 kWh per use", "A solar water heater can replace me entirely!", "Don't heat water to max — 40°C is comfortable enough"],
+        "angry": "You left me heating for 2 hours?! The water is practically boiling!",
+        "happy": "Only 15 minutes today! That's the way to use me efficiently!"
+      },
+      "tips": ["Use for only 15 minutes — water stays hot for a while", "Solar water heater = free hot water", "Insulate hot water pipes to reduce heat loss"],
+      "quiz": [
+        {
+          "question": "What's the most efficient replacement for an electric geyser?",
+          "options": ["Gas geyser", "Solar water heater", "Bigger geyser", "Heat pump"],
+          "answer": 1,
+          "explanation": "A solar water heater uses FREE solar energy and can provide hot water for 300+ days a year in India!"
+        }
+      ]
+    },
+    {
+      "id": "washing_machine",
+      "name": "Washing Machine",
+      "icon": "🧺",
+      "category": "Laundry",
+      "room": "bathroom",
+      "wattage": 500,
+      "standbyWatts": 2,
+      "hoursPerDay": 1,
+      "starRating": 3,
+      "price": 15000,
+      "character": "The spin master",
+      "dialogue": {
+        "intro": "I use 500W per wash cycle. But here's a secret — 90% of my energy goes to HEATING water! Use cold water and save big!",
+        "tap": ["Cold water washes save 90% of my energy!", "Only run me with a full load", "I use 2W on standby — unplug me when not in use"],
+        "angry": "A half-empty load? That's double the energy per garment!",
+        "happy": "Full load, cold water — you're a laundry pro!"
+      },
+      "tips": ["Wash with cold water — saves 90% energy", "Only run full loads", "Use high-speed spin to reduce drying time"],
+      "quiz": [
+        {
+          "question": "How much energy can cold water washing save?",
+          "options": ["10%", "30%", "60%", "90%"],
+          "answer": 3,
+          "explanation": "90% of a washing machine's energy goes to heating water. Cold water washes work great for most clothes!"
+        }
+      ]
+    },
+    {
+      "id": "wifi_router",
+      "name": "WiFi Router",
+      "icon": "📡",
+      "category": "Electronics",
+      "room": "living_room",
+      "wattage": 12,
+      "standbyWatts": 12,
+      "hoursPerDay": 24,
+      "starRating": 4,
+      "price": 2000,
+      "character": "Always connected",
+      "dialogue": {
+        "intro": "I'm always on — 12W, 24/7. I use 8.6 kWh per month. Small individually, but millions of routers add up!",
+        "tap": ["I use 8.6 kWh per month — that's ₹69", "Turn me off at night to save 33% of my energy", "I'm one of the lowest-power 'always on' devices"],
+        "angry": "I've been broadcasting to nobody all night!",
+        "happy": "You set a schedule for me — on when needed, off when sleeping!"
+      },
+      "tips": ["Turn off at night if not needed", "Place centrally for better signal — avoid range extenders"],
+      "quiz": [
+        {
+          "question": "How much does a WiFi router cost to run per year?",
+          "options": ["₹100", "₹500", "₹830", "₹2,000"],
+          "answer": 2,
+          "explanation": "12W × 24hrs × 365days ÷ 1000 × ₹8 = ₹841 per year. Small but it adds up!"
+        }
+      ]
+    },
+    {
+      "id": "phone_charger",
+      "name": "Phone Charger",
+      "icon": "🔌",
+      "category": "Electronics",
+      "room": "bedroom",
+      "wattage": 5,
+      "standbyWatts": 0.5,
+      "hoursPerDay": 3,
+      "starRating": 5,
+      "price": 800,
+      "character": "Tiny but sneaky",
+      "dialogue": {
+        "intro": "I'm tiny — just 5W while charging! But did you know I still draw 0.5W even with no phone plugged in? Multiply that by billions of chargers worldwide...",
+        "tap": ["Unplug me when not charging!", "I draw phantom power even without a phone", "Fast chargers use 20-65W — much more than me!"],
+        "angry": "I've been plugged in with no phone for 20 hours! Wasting energy!",
+        "happy": "Thanks for unplugging me! Every bit of phantom load matters!"
+      },
+      "tips": ["Unplug when not charging", "Avoid overnight charging — wastes energy after full charge", "Phone chargers left plugged in globally waste enough energy to power 100,000 homes"],
+      "quiz": [
+        {
+          "question": "What happens when you leave a charger plugged in without a phone?",
+          "options": ["Nothing — it uses 0W", "It draws 0.5-1W of phantom power", "It uses full 5W", "It doubles power use"],
+          "answer": 1,
+          "explanation": "Chargers draw 'vampire power' even when no device is connected. Globally, this waste is enormous!"
+        }
+      ]
+    },
+    {
+      "id": "iron",
+      "name": "Iron",
+      "icon": "👔",
+      "category": "Laundry",
+      "room": "bedroom",
+      "wattage": 1000,
+      "standbyWatts": 0,
+      "hoursPerDay": 0.5,
+      "starRating": 3,
+      "price": 1200,
+      "character": "Hot and pressed",
+      "dialogue": {
+        "intro": "I use 1000W — that's a LOT for such a small appliance! But I'm usually only on for 15-30 minutes.",
+        "tap": ["Iron multiple clothes in one session!", "Turn me off 5 minutes early — I stay hot!", "Use the right temperature for each fabric"],
+        "angry": "You left me face-down and plugged in?! Fire hazard!",
+        "happy": "Batch ironing — efficient and smart!"
+      },
+      "tips": ["Batch iron — don't heat up for one item", "Turn off 5 min early — residual heat works", "Start with low-temp fabrics, end with high-temp"],
+      "quiz": [
+        {
+          "question": "What's the best way to save energy while ironing?",
+          "options": ["Use the hottest setting always", "Iron one item at a time", "Batch iron multiple items", "Never iron"],
+          "answer": 2,
+          "explanation": "Batch ironing means you heat up the iron once and iron multiple items — saving the energy of repeated heat-up cycles!"
+        }
+      ]
+    }
+  ]
+}
